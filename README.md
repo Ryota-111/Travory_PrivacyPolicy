@@ -6,7 +6,7 @@
 
 ## 日本語版
 
-**最終更新日：2026年8月7日**
+**最終更新日：2026年8月28日**
 
 ### はじめに
 
@@ -81,20 +81,45 @@ Travoryは、旅行計画・記録・共有を目的とした旅行関連アプ�
 #### 3.2 iCloud（CloudKit）
 
 - **プライベートデータベース：** 旅行計画、予定、保存したスポット、アルバムの情報を保存し、同じApple Accountでサインインした端末間で同期します。ここに保存されたデータはお客様のiCloud領域にあり、開発者が閲覧することはできません。
-- **パブリックデータベース：** 「ご意見・ご要望」から送信された内容の受け取りにのみ使用します。
+- **パブリックデータベース：** 「ご意見・ご要望」から送信された内容の受け取りと、共有機能をご利用になった旅行計画の保存に使用します（詳しくは「4.3 他のユーザーとの旅行計画の共有」をご覧ください）。
 
 #### 3.3 WeatherKit
 
 旅行の目的地の天気予報を表示するために、目的地の座標をAppleに送信します。
 
+#### 3.4 マップ（MapKit）
+
+地図の表示と場所の検索に使用します。場所を検索された際は、入力された検索語と地図の表示範囲がAppleに送信されます。
+
+#### 3.5 App内課金（StoreKit）
+
+アプリ内に、開発を応援していただくための任意の「投げ銭」機能があります。決済はAppleが取り扱い、**開発者がクレジットカード番号などの決済情報を受け取ることはありません。** ご利用にならなくても、アプリのすべての機能をお使いいただけます。
+
 これらのサービスに保存されたデータの取り扱いについては、Appleのプライバシーポリシーをご参照ください：
 https://www.apple.com/legal/privacy/
 
-#### 3.4 広告およびアナリティクス
+#### 3.6 広告およびアナリティクス
 
-> - **本アプリは、広告を表示しません。**
+> - **本アプリは、バナー広告などの広告枠を設けていません。**
 > - **本アプリは、アクセス解析ツールやトラッキングツールを一切使用しません。**
 > - **本アプリは、広告識別子（IDFA）を取得しません。**
+
+#### 3.7 アフィリエイトリンクについて
+
+本アプリには、レジャー・遊び体験予約サイト「アソビュー！」へのアフィリエイトリンク（広告）を掲載しています。該当箇所には「PR」と表示しています。このリンクは、アフィリエイトサービス「A8.net」（株式会社ファンコミュニケーションズ）を経由します。
+
+- リンクをタップされた場合のみ、外部サイトへ移動します。タップされない限り、外部サイトへの通信は発生しません。
+- リンクには、成果測定のための識別子（お客様個人を特定しない、当方の媒体を示す情報）が含まれます。
+- 本アプリがリンクに含めるのは、**行き先の都道府県などの検索条件のみ**です。
+- **お客様のお名前、メールアドレス、位置情報、旅行計画の内容など、本アプリ内のデータが提携先へ送信されることはありません。**
+- リンクを経由した予約が成立した場合、開発者が紹介料を受け取ることがあります。**お客様のお支払額が増えることはありません。**
+- 移動先の外部サイトおよびA8.netにおける情報の取り扱いは、それぞれのプライバシーポリシーが適用されます。あわせてご確認ください。
+
+提携先（アソビュー株式会社）のプライバシーポリシー：
+https://asoview.co.jp/privacy/
+
+A8.net（株式会社ファンコミュニケーションズ）のプライバシーポリシー：
+https://www.a8.net/privacy.html
 
 ### 4. データの保存と管理
 
@@ -111,12 +136,18 @@ https://www.apple.com/legal/privacy/
 
 #### 4.3 他のユーザーとの旅行計画の共有
 
-本アプリには、旅行計画を他のユーザーと共有する機能があります。共有コードを他のユーザーにお伝えいただくと、その旅行計画の内容が共有先のユーザーに表示されます。**共有する内容と共有先は、お客様ご自身が選択・管理するものです。** 共有機能をご利用にならない場合、お客様のデータが他のユーザーに表示されることはありません。
+本アプリには、旅行計画を他のユーザーと共有する機能があります。**共有をご利用になった旅行計画は、共有コードを知っている方が取得できる領域（iCloudのパブリックデータベース）に保存されます。** 仕組み上、共有コードを知った第三者は、その内容を閲覧できます。
+
+- 共有された計画には、旅行名・日程・タイムスケジュール・費用など、その計画に入力された内容が含まれます。
+- 共有コードは、共有したい相手にのみお伝えください。
+- **共有機能をご利用にならない旅行計画、および日常の予定・記念日は、この領域に保存されることはありません。**
+- 共有はアプリ内でいつでも解除できます。
 
 ### 5. データの削除
 
 - **個別のデータ：** 旅行計画、予定、スポット、写真は、アプリ内でいつでも削除できます。
-- **アカウントと全データ：** アプリ内の設定画面から、アカウントおよび保存されているすべてのデータを削除できます。
+- **アカウントと全データ：** アプリ内の設定画面から、アカウントおよび保存されているすべてのデータを削除できます。**この操作は取り消せません。**
+- **アプリの削除について：** 本アプリを端末から削除しただけでは、iCloudに保存されたデータは残ります。すべて消去されたい場合は、上記の「アカウントと全データ」の削除をご利用ください。
 - **送信したご意見・ご要望：** 削除をご希望の場合は、末尾のお問い合わせ先までご連絡ください。
 
 ### 6. データのセキュリティ
@@ -142,7 +173,7 @@ https://www.apple.com/legal/privacy/
 
 ## English Version
 
-**Last Updated: August 7, 2026**
+**Last Updated: August 28, 2026**
 
 ### Introduction
 
@@ -217,20 +248,45 @@ Used to authenticate users.
 #### 3.2 iCloud (CloudKit)
 
 - **Private database:** Stores your travel plans, plans, saved places, and album information, and syncs them across devices signed in with the same Apple Account. This data resides in your own iCloud storage and cannot be viewed by the Developer.
-- **Public database:** Used solely to receive content submitted through the "Feedback" form.
+- **Public database:** Used to receive content submitted through the "Feedback" form, and to store travel plans for which you have enabled sharing (see "4.3 Sharing Travel Plans with Other Users").
 
 #### 3.3 WeatherKit
 
 Destination coordinates are sent to Apple in order to display weather forecasts for your travel destinations.
 
+#### 3.4 Maps (MapKit)
+
+Used to display maps and search for places. When you search for a place, your search terms and the visible map region are sent to Apple.
+
+#### 3.5 In-App Purchase (StoreKit)
+
+The App offers an optional "tip" feature for supporting development. Payments are handled by Apple, and **the Developer never receives payment details such as your credit card number.** All features of the App remain available whether or not you use it.
+
 For information on how data stored in these services is handled, please refer to Apple's privacy policy:
 https://www.apple.com/legal/privacy/
 
-#### 3.4 Advertising and Analytics
+#### 3.6 Advertising and Analytics
 
-> - **The App does NOT display advertisements.**
+> - **The App does NOT contain banner or interstitial advertising slots.**
 > - **The App does NOT use any analytics or tracking tools.**
 > - **The App does NOT collect the advertising identifier (IDFA).**
+
+#### 3.7 Affiliate Links
+
+The App contains affiliate links (advertisements) to "Asoview!", a booking site for leisure activities and experiences. Such links are labeled "PR". These links are routed through the affiliate service "A8.net" (Fan Communications, Inc.).
+
+- You are taken to the external site only when you tap the link. No communication with the external site occurs unless you tap it.
+- The link contains an identifier used for measuring referrals. This identifier represents our media, not you personally.
+- The only information the App includes in the link is **search criteria such as the destination prefecture**.
+- **None of your data in the App, such as your name, email address, location data, or the contents of your travel plans, is sent to the partner site.**
+- If a booking is made through such a link, the Developer may receive a referral commission. **This does not increase the amount you pay.**
+- Information handling on the external site and on A8.net is governed by their respective privacy policies. Please review them as well.
+
+Privacy policy of the partner (Asoview, Inc.):
+https://asoview.co.jp/privacy/
+
+Privacy policy of A8.net (Fan Communications, Inc.):
+https://www.a8.net/privacy.html
 
 ### 4. Data Storage and Management
 
@@ -247,12 +303,18 @@ Data will not be disclosed except when legally required or mandated by law.
 
 #### 4.3 Sharing Travel Plans with Other Users
 
-The App allows you to share travel plans with other users. When you give your share code to another user, the contents of that travel plan become visible to them. **You choose and control what you share and with whom.** If you do not use the sharing feature, your data is never shown to other users.
+The App allows you to share travel plans with other users. **A travel plan for which you enable sharing is stored in an area retrievable by anyone who knows the share code (iCloud's public database).** By design, a third party who learns the share code can view its contents.
+
+- A shared plan includes what you entered for it, such as its title, dates, timeline, and expenses.
+- Please give the share code only to the people you intend to share with.
+- **Travel plans for which you do not enable sharing, as well as your everyday plans and anniversaries, are never stored in this area.**
+- You can stop sharing at any time within the App.
 
 ### 5. Deleting Your Data
 
 - **Individual data:** Travel plans, plans, places, and photos can be deleted within the App at any time.
-- **Your account and all data:** You can delete your account and all stored data from the settings screen in the App.
+- **Your account and all data:** You can delete your account and all stored data from the settings screen in the App. **This action cannot be undone.**
+- **Deleting the App:** Removing the App from your device alone does not delete data stored in iCloud. To erase everything, please use the account deletion described above.
 - **Submitted feedback:** To request deletion, please contact us using the details below.
 
 ### 6. Data Security
