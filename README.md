@@ -6,7 +6,7 @@
 
 ## 日本語版
 
-**最終更新日：2026年8月28日**
+**最終更新日：2026年8月31日**
 
 ### はじめに
 
@@ -49,7 +49,7 @@ Travoryは、旅行計画・記録・共有を目的とした旅行関連アプ�
 
 - **使用目的：** 旅行の思い出を記録・閲覧するため
 - **収集方法：** ユーザーが端末内から選択した写真のみを取得します。写真ライブラリ全体を読み取ることはありません。
-- **保存場所：** 写真の実データはお使いの端末内にのみ保存されます。
+- **保存場所：** 写真の実データはお使いの端末内に保存されます。**追加テーマの買い切り（Travory Pro）をご購入いただいた場合に限り、お客様ご自身のiCloud（CloudKit のプライベートデータベース）にも保管し、同じApple Accountの端末間で同期します。** これは機種変更やアプリの入れ直しで写真が失われないようにするためのものです。保管先はお客様のiCloud領域であり、**開発者が写真を閲覧することはできません。** ご購入いただいていない場合、写真が端末の外に出ることはありません。
 
 #### 2.4 旅行計画・記録データ
 
@@ -93,7 +93,14 @@ Travoryは、旅行計画・記録・共有を目的とした旅行関連アプ�
 
 #### 3.5 App内課金（StoreKit）
 
-アプリ内に、開発を応援していただくための任意の「投げ銭」機能があります。決済はAppleが取り扱い、**開発者がクレジットカード番号などの決済情報を受け取ることはありません。** ご利用にならなくても、アプリのすべての機能をお使いいただけます。
+本アプリには、以下の2種類のApp内課金があります。決済はいずれもAppleが取り扱い、**開発者がクレジットカード番号などの決済情報を受け取ることはありません。**
+
+- **追加テーマ（買い切り）：** アプリの配色・書体・形などを変える追加テーマをご利用いただけます。お支払いは一度きりで、その後に追加されるテーマも含まれます。
+- **投げ銭：** 開発を応援していただくための任意の機能です。
+
+購入されたかどうかは、Appleから提供される情報をもとに端末内で判定しています。**本アプリは独自のサーバーを持たないため、購入に関する情報が開発者のもとに送られることはありません。**
+
+追加テーマを購入されなくても、旅行計画・予定・場所の保存・アルバム・共有など、記録と計画のための機能はすべてお使いいただけます。標準のテーマも引き続き無料でご利用いただけます。
 
 これらのサービスに保存されたデータの取り扱いについては、Appleのプライバシーポリシーをご参照ください：
 https://www.apple.com/legal/privacy/
@@ -125,7 +132,7 @@ https://www.a8.net/privacy.html
 
 #### 4.1 データの保存場所
 
-- **お客様のiCloud（CloudKit）：** 旅行計画、予定、保存したスポット、アルバムなどのデータ
+- **お客様のiCloud（CloudKit）：** 旅行計画、予定、保存したスポット、アルバム、やることリストなどのデータ。および、Travory Pro をご購入いただいた場合は写真の実データ
 - **デバイス内：** 写真の実データ、アカウント情報、アプリの設定
 
 #### 4.2 データの共有
@@ -173,7 +180,7 @@ https://www.a8.net/privacy.html
 
 ## English Version
 
-**Last Updated: August 28, 2026**
+**Last Updated: August 31, 2026**
 
 ### Introduction
 
@@ -216,7 +223,7 @@ The App may collect the following information:
 
 - **Purpose:** To record and view travel memories
 - **Collection Method:** Only photos you select from your device are accessed. The App does not read your entire photo library.
-- **Storage Location:** Photo files are stored only on your device.
+- **Storage Location:** Photo files are stored on your device. **Only if you have purchased the one-time additional themes (Travory Pro) are they also stored in your own iCloud (CloudKit private database) and synced across devices signed in with the same Apple Account.** This exists so that your photos are not lost when you change devices or reinstall the App. The storage is your own iCloud, and **the Developer cannot view your photos.** If you have not purchased, photos never leave your device.
 
 #### 2.4 Travel Plans and Records
 
@@ -260,7 +267,14 @@ Used to display maps and search for places. When you search for a place, your se
 
 #### 3.5 In-App Purchase (StoreKit)
 
-The App offers an optional "tip" feature for supporting development. Payments are handled by Apple, and **the Developer never receives payment details such as your credit card number.** All features of the App remain available whether or not you use it.
+The App offers the following two types of in-app purchase. All payments are handled by Apple, and **the Developer never receives payment details such as your credit card number.**
+
+- **Additional themes (one-time purchase):** Unlocks additional themes that change the App's colors, typefaces, and shapes. You pay once, and themes added later are included.
+- **Tips:** An optional feature for supporting development.
+
+Whether you have purchased is determined on your device based on information provided by Apple. **The App has no server of its own, so no purchase information is ever sent to the Developer.**
+
+Even without purchasing the additional themes, every feature for recording and planning — travel plans, plans, saved places, albums, and sharing — remains available, as do the standard themes.
 
 For information on how data stored in these services is handled, please refer to Apple's privacy policy:
 https://www.apple.com/legal/privacy/
@@ -292,7 +306,7 @@ https://www.a8.net/privacy.html
 
 #### 4.1 Data Storage Location
 
-- **Your iCloud (CloudKit):** Travel plans, plans, saved places, albums, and related data
+- **Your iCloud (CloudKit):** Travel plans, plans, saved places, albums, to-do lists, and related data; and photo files if you have purchased Travory Pro
 - **Your device:** Photo files, account information, and app settings
 
 #### 4.2 Data Sharing
